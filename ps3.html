@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <script>
+// 1. Sum of Even Numbers
+// Write a program to find the sum of all even numbers between 1 and 50 using a while loop.
+// Example: The output should be 650.
+var num=1
+sum=0
+while(num<=50){
+    if(num%2==0){
+        sum=sum+num
+    }
+    num++
+}
+console.log(sum)
+
+// 2. Count Digits
+// Write a program that takes a number as input and counts the number of digits in it using a while loop.
+// Example: Input: 12345 → Output: 5
+var num=12345
+count=0
+while(num>0){
+     num = Math.floor(num / 10);  
+    count++;
+}
+console.log(count)
+
+// 3. Find Minimum Digit
+// Write a program to find the smallest digit in a given number using a while loop.
+// Example: Input: 27649 → Output: 2
+var num=27649
+mindigit=9;
+while(num>0){
+    rem=num%10;
+    if (rem < mindigit) {
+        mindigit = rem;  
+    }
+    num = Math.floor(num / 10)
+
+}
+console.log(mindigit)
+
+// 4. Sum of Odd Digits
+// Write a program that takes a number as input and calculates the sum of all its odd digits using a while loop.
+// Example: Input: 13579 → Output: 25
+
+var num=13579
+sum=0
+while(num>0){
+   rem=num%10;
+   if(rem%2==!0){
+    sum=sum+rem
+
+   }
+   num=Math.floor(num/10)      
+    }
+    console.log(sum)
+// 5. Perfect Number Check
+// A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself). Write a program to check if a given number is a perfect number.
+// Example: Input: 28 → Output: true (since 1 + 2 + 4 + 7 + 14 = 28)
+var num=28
+sum = 0;
+i = 1;
+
+
+while (i <= num / 2) {
+    if (num % i === 0) {
+        sum += i;  
+    }
+    i++;
+}
+
+if (sum === num && num > 0) {
+    console.log("true");
+} else{
+     console.log("false"); 
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
